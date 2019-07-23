@@ -1,4 +1,6 @@
+
 import static org.junit.Assert.assertEquals;
+
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
@@ -16,6 +18,8 @@ public class TestCode {
 		new Person("Olga","Ivanova",LocalDate.parse("2001-07-07"))
 	);
 		List<Person> testv = Main.makePersonList("Persons.txt");
-		assertEquals(result, testv);
+		for (int i = 0; i < result.size(); i++) {
+			assertEquals(result.get(i), testv.get(i));
+		}
 	}
 }
