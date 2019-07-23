@@ -14,9 +14,11 @@ public class Main {
 	public static List<Person> makePersonList(String fileName) throws Exception{
 			BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
 			Stream<String> lines = bufferedReader.lines();
+			BirthDayComparator bdc = new BirthDayComparator();
 			return lines
 					.map(s -> s.split(","))
 					.map(s -> new Person(s[0], s[1], LocalDate.parse(s[2])))
+					.sorted(bdc)
 					.collect(Collectors.toList());
 	}
 }

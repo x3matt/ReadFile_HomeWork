@@ -13,8 +13,8 @@ public class TestCode {
 	public void makePersonListTest() throws Exception {
 		//Persons.txt
 		List<Person> result = Arrays.asList(
-		new Person("Ivan","Evglenov",LocalDate.parse("2000-04-21")),
 		new Person("Evgeniy","Kurbatov",LocalDate.parse("1998-01-23")),
+		new Person("Ivan","Evglenov",LocalDate.parse("2000-04-21")),
 		new Person("Olga","Ivanova",LocalDate.parse("2001-07-07"))
 	);
 		List<Person> testv = Main.makePersonList("Persons.txt");
